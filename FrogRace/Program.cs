@@ -5,6 +5,9 @@ namespace FrogRace
 {
     class Program
     {
+        private static Random rnd;
+        private static object frogLock;
+
         private static void Race(object frogNumber)
         {
             int i = (int)frogNumber;
@@ -13,6 +16,13 @@ namespace FrogRace
 
             for(int j = 0; j < 10; j++)
             {
+                int ms;
+
+                lock(frogLock)
+                {
+                    ms = rnd.Next(1001);
+                }
+                
                 Console.WriteLine(
                     $"Rã {i} deu salto {j} (nome da tread: {Thread.CurrentThread.Name}");
             }
@@ -23,6 +33,9 @@ namespace FrogRace
         static void Main(string[] args)
         {
             Thread t1 = new Thread(Race);
+            rnd = new Random();
+            frogLock = new object();
+
             t1.Name = "Frog 1";
 
             Thread t2 = new Thread(Race);
