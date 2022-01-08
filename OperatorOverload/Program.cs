@@ -11,39 +11,57 @@ namespace OperatorOverload
             Vector3 v2 = new Vector3(-1, 0, 1);
 
             // Show the vector values
-            Console.WriteLine($"v1 = {v1}");
-            Console.WriteLine($"v2 = {v2}");
+            Console.WriteLine($"v1 = {v1.ToString()}");
+            Console.WriteLine($"v2 = {v2.ToString()}");
+
+            Console.WriteLine();
 
             // Show the vector magnitudes
             Console.WriteLine($"v1.Magnitude = {v1.Magnitude}");
             Console.WriteLine($"v2.Magnitude = {v2.Magnitude}");
 
-            // // Sum two vectors
-            // Console.WriteLine($"v1 + v2 = {v1 + v2}");
+            Console.WriteLine();
 
-            // // Subtract two vectors
-            // Console.WriteLine($"v1 - v2 = {v1 - v2}");
+            // Sum two vectors
+            Console.WriteLine($"v1 + v2 = {v1 + v2}");
 
-            // // Negate a vector
-            // Console.WriteLine($"-v1 = {-v1}");
+            Console.WriteLine();
 
-            // // Multiply a vector with a scalar
-            // Console.WriteLine($"v1 * 3 = {v1 * 3}");
+            // Subtract two vectors
+            Console.WriteLine($"v1 - v2 = {v1 - v2}");
 
-            // // Divide a vector with a scalar
-            // Console.WriteLine($"v1 / 2 = {v1 / 2}");
+            Console.WriteLine();
 
-            // // Check if two vectors are equal
-            // Console.WriteLine($"v1 == v2? {v1 == v2}");
+            // Negate a vector
+            Console.WriteLine($"-v1 = {-v1}");
 
-            // // Check if two vectors are different
-            // Console.WriteLine($"v1 != v2? {v1 != v2}");
+            Console.WriteLine();
+
+            // Multiply a vector with a scalar
+            Console.WriteLine($"v1 * 3 = {v1 * 3}");
+
+            Console.WriteLine();
+
+            //Divide a vector with a scalar
+            Console.WriteLine($"v1 / 2 = {v1 / 2}");
+
+            Console.WriteLine();
+
+            // Check if two vectors are equal
+            Console.WriteLine($"v1 == v2? {v1 == v2}");
+
+            Console.WriteLine();
+
+            // Check if two vectors are different
+            Console.WriteLine($"v1 != v2? {v1 != v2}");
+
+            Console.WriteLine();
 
             // Relational comparison between vectors
             Console.WriteLine($"v1 >  v2? {v1 > v2}");
-            //Console.WriteLine($"v1 >= v2? {v1 >= v2}");
+            Console.WriteLine($"v1 >= v2? {v1 >= v2}");
             Console.WriteLine($"v1 <  v2? {v1 < v2}");
-            //Console.WriteLine($"v1 <= v2? {v1 <= v2}");
+            Console.WriteLine($"v1 <= v2? {v1 <= v2}");
         }
     }
 }
